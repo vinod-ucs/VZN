@@ -96,6 +96,18 @@
             animation: logoPulse 2.5s infinite ease-in-out;
         }
 
+        @keyframes scrollAnim {
+            0% { transform: scaleY(0); transform-origin: top; }
+            50% { transform: scaleY(1); transform-origin: top; }
+            50.1% { transform: scaleY(1); transform-origin: bottom; }
+            100% { transform: scaleY(0); transform-origin: bottom; }
+        }
+
+        .scroll-indicator {
+            text-align: center;
+            width: 100%;
+            max-width: 160px;
+        }
         @keyframes logoPulse {
             0% {
                 transform: scale(0.95);
@@ -252,8 +264,8 @@
         }
 
         .slide[data-label="Cover"] .slide-media::after {
-            background: rgba(0, 0, 0, 0.3);
-            /* Much lighter for the first slide */
+            background: transparent;
+            /* Fully transparent for the first slide to show image infront */
         }
 
         /* Content Overlay */
@@ -931,46 +943,8 @@
             box-shadow: 0 0 15px var(--primary);
         }
 
-        @media (max-width: 1280px) {
-            .team-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .sidebar {
-                display: none;
-            }
-
-            .progress-bar {
-                left: 0;
-            }
-
-            .slide-info {
-                padding: 40px;
-            }
-
-            .main-header {
-                right: 40px;
-            }
-
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .check-item {
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .team-grid {
-                grid-template-columns: repeat(1, 1fr);
-            }
-
-            .slide-title {
-                font-size: 50px;
-            }
+        .start-img {
+            max-width: 1300px;
         }
 
         .start-img {
@@ -1116,20 +1090,19 @@
 
                 <!-- Slide 1 -->
                 <section class="slide active" data-label="Cover">
-                    <div class="slide-media"></div>
+                    <div class="slide-media"><img src="start.png" alt="Cover"></div>
                     <div class="slide-info">
                         <h1 class="slide-title" style="font-size: clamp(60px, 10vw, 160px);">VISION
                             YOUR<span>FITNESS</span></h1>
                         <p class="slide-subtitle"
                             style="color: #fff; font-size: clamp(24px, 4vw, 42px); letter-spacing: 5px;">Chandigarh's
                             Elite Fitness Destination</p>
-                        <div class="inline-box-container" style="margin-top: 50px;"><img src="start.png" alt="Cover">
-                            <div class="service-tag-row">
-                                <span class="service-tag">GYM</span><span class="service-tag">CARDIO</span><span
-                                    class="service-tag">SPA</span>
-                                <span class="service-tag">DANCE</span><span class="service-tag">YOGA</span><span
-                                    class="service-tag">FITNESS</span>
-                            </div>
+                        <div class="inline-box-container" style="margin-top: 50px;">
+                            <!-- Service tags removed as per request to focus on elite destination -->
+                        </div>
+                        <div class="scroll-indicator" style="margin-top: 40px; opacity: 0.6; font-size: 14px; letter-spacing: 3px; font-weight: 700; text-transform: uppercase;">
+                            <span style="display: block; margin-bottom: 10px;">Explore VZN</span>
+                            <div style="width: 2px; height: 50px; background: var(--primary); margin: 0 auto; animation: scrollAnim 2s infinite;"></div>
                         </div>
                     </div>
                 </section>
