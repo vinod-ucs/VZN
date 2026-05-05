@@ -686,11 +686,199 @@
         /* Nav Controls */
         .nav-controls {
             position: fixed;
-            bottom: 40px;
+            bottom: 30px;
             right: 40px;
             display: flex;
-            gap: 15px;
+            gap: 20px;
             z-index: 1000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .app-container {
+                flex-direction: column-reverse;
+            }
+
+            .main-header {
+                top: 20px;
+                right: 20px;
+                text-align: right;
+                width: auto;
+            }
+
+            .header-logo {
+                height: 60px;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: 60px;
+                flex-direction: row;
+                border-right: none;
+                border-top: 1px solid var(--border);
+                justify-content: center;
+                overflow-x: auto;
+                background: rgba(0, 0, 0, 0.95);
+                backdrop-filter: blur(10px);
+            }
+
+            .nav-item {
+                padding: 0 15px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 50px;
+            }
+
+            .nav-item.active::after {
+                right: 15%;
+                top: auto;
+                bottom: 0;
+                height: 3px;
+                width: 70%;
+            }
+
+            .nav-num {
+                font-size: 20px;
+            }
+
+            .slide-info {
+                padding: 100px 30px 100px 30px;
+                justify-content: center;
+            }
+
+            .slide-title {
+                font-size: clamp(35px, 8vw, 80px);
+            }
+
+            .team-card {
+                flex: 0 0 300px;
+            }
+
+            .slide-media::after {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.9) 100%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-header {
+                top: 15px;
+                right: 15px;
+            }
+
+            .header-logo {
+                height: 50px;
+            }
+
+            .slide-info {
+                padding: 80px 20px 100px 20px;
+            }
+
+            .slide-title {
+                font-size: clamp(30px, 10vw, 60px);
+            }
+
+            .slide-subtitle {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            .check-item {
+                padding: 10px 15px;
+                gap: 12px;
+                font-size: 16px;
+            }
+
+            .check-icon {
+                font-size: 20px;
+            }
+
+            .team-card {
+                flex: 0 0 85vw;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            .team-avatar-box {
+                width: 100px;
+                height: 100px;
+            }
+
+            .team-exp-label {
+                font-size: 22px;
+                padding: 8px;
+            }
+
+            .team-card-name {
+                font-size: 28px;
+            }
+
+            .benefit-box {
+                min-width: 100%;
+                padding: 25px;
+            }
+
+            .benefit-box::before {
+                top: 15px;
+                right: -40px;
+                font-size: 10px;
+                padding: 4px 40px;
+            }
+
+            .benefit-box-title {
+                font-size: 48px;
+            }
+
+            .plan-box {
+                min-width: 100%;
+                padding: 20px;
+            }
+
+            .plan-box-name {
+                font-size: 28px;
+            }
+
+            .plan-box-price {
+                font-size: 32px;
+            }
+
+            .nav-controls {
+                right: 15px;
+                bottom: 75px;
+                gap: 10px;
+            }
+
+            .nav-btn {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+
+            .social-footer {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .plan-box {
+                min-width: 100%;
+            }
+
+            .service-tag {
+                padding: 5px 15px;
+                font-size: 20px;
+            }
+
+            .social-footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .social-link {
+                font-size: 14px;
+            }
         }
 
         .nav-btn {
@@ -935,8 +1123,7 @@
                         <p class="slide-subtitle"
                             style="color: #fff; font-size: clamp(24px, 4vw, 42px); letter-spacing: 5px;">Chandigarh's
                             Elite Fitness Destination</p>
-                        <div class="inline-box-container" style="margin-top: 50px;"><img src="start.png"
-                                alt="Cover">
+                        <div class="inline-box-container" style="margin-top: 50px;"><img src="start.png" alt="Cover">
                             <div class="service-tag-row">
                                 <span class="service-tag">GYM</span><span class="service-tag">CARDIO</span><span
                                     class="service-tag">SPA</span>
