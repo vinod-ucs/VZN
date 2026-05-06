@@ -48,8 +48,8 @@
         /* Global Branding */
         .main-header {
             position: fixed;
-            top: 40px;
-            right: 140px;
+            top: 20px;
+            right: 0px;
             z-index: 1000;
             pointer-events: none;
         }
@@ -803,7 +803,11 @@
             display: flex;
             gap: 20px;
             z-index: 1000;
+            opacity:0.5;
         }
+        .nav-controls:hover{
+            opacity:1;
+        } 
 
         /* Responsive Design */
         @media (max-width: 1368px) {
