@@ -575,7 +575,7 @@
         .certification-footer {
             display: flex;
             gap: 40px;
-            margin-top: 40px;
+            margin-top: 0px;
             align-items: center;
             border-top: 1px solid var(--border);
             padding-top: 25px;
@@ -819,6 +819,12 @@
 
         /* Responsive Design */
         @media (max-width: 1368px) {
+            .sidebar{
+                display: none;
+            }
+             .certification-footer{
+                 margin-top:0px;
+             }
 
             .slide-info {
                 padding: 40px 30px 40px 30px;
