@@ -455,7 +455,7 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 10px;
             overflow: hidden;
         }
 
@@ -506,7 +506,7 @@
             font-weight: 800;
             color: var(--primary);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             display: block;
         }
 
@@ -537,14 +537,14 @@
         }
 
         .team-certs-list li {
-            font-size: 12px;
+            font-size: 14px;
             color: var(--text-gray);
             margin-bottom: 5px;
             display: flex;
             align-items: center;
             gap: 8px;
-            text-transform: uppercase;
-            font-weight: 600;
+            text-transform: capitalize;
+            font-weight: 400;
         }
 
         .team-certs-list li::before {
@@ -560,7 +560,7 @@
             background: var(--primary);
             width: 100%;
             padding: 10px;
-            margin-top: 15px;
+            margin-top: 0px;
             letter-spacing: 2px;
         }
 
@@ -808,6 +808,9 @@
         .nav-controls:hover{
             opacity:1;
         } 
+        .nav-btn{
+            border: none;
+        }
 
         /* Responsive Design */
         @media (max-width: 1368px) {
@@ -933,7 +936,7 @@
             .team-card {
                 flex: 0 0 85vw;
                 padding: 20px;
-                gap: 15px;
+                gap: 10px;
             }
 
             .team-avatar-box {
@@ -1086,7 +1089,7 @@
 
         .autoplay-btn {
             width: auto;
-            padding: 0 30px;
+            padding: 0px;
             border-radius: 35px;
             font-family: 'Bebas Neue', sans-serif;
             font-size: 18px;
